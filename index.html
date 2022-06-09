@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <main>
+      <section class="left">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+      <section class="right">
+        <h2>Try it free 7 days <span>then $20/mo. thereafter</span></h2>
+        <form action="" onsubmit="return validateForm(event)" method="post">
+          <div class="form-control">
+            <input
+              type="text"
+              name="firstName"
+              id="firstName"
+              autocomplete="given-name"
+              required
+              placeholder="First Name"
+            />
+            <img src="./assets/images/icon-error.svg" alt="" />
+            <small class="error-message">Error message</small>
+          </div>
+          <div class="form-control">
+            <input
+              type="text"
+              name="lastName"
+              id="lastName"
+              autocomplete="family-name"
+              required
+              placeholder="Last Name"
+            />
+            <img src="./assets/images/icon-error.svg" alt="" />
+            <small class="error-message">Error message</small>
+          </div>
+          <div class="form-control">
+            <input
+              type="email"
+              name="eMail"
+              id="eMail"
+              autocomplete="email"
+              required
+              placeholder="Email Address"
+            />
+            <img src="./assets/images/icon-error.svg" alt="" />
+            <small class="error-message">Error message</small>
+          </div>
+          <div class="form-control">
+            <input
+              type="password"
+              name="passWord"
+              id="passWord"
+              autocomplete="new-password"
+              required
+              placeholder="Password"
+            />
+            <img src="./assets/images/icon-error.svg" alt="" />
+            <small class="error-message">Error message</small>
+          </div>
+          <div class="form-control">
+            <input
+              type="submit"
+              value="Claim your free trial"
+              onclick="validateFormOnSubmit(event)"
+            />
+          </div>
+          <p>
+            By clicking the button, you are agreeing to our
+            <a href="#">Terms and Services</a>
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <p class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://github.com/jenniferhubermayer" target="_blank"
+          >Jennifer Huber-Mayer</a
+        >.
+      </p>
+    </footer>
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
