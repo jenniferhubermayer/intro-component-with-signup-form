@@ -20,7 +20,7 @@ function validateFormOnSubmit(event){
         document.querySelector(".form-control").classList.remove("invalidStyle");
         document.querySelector(".form-control").classList.add("validStyle");
     };
-        // CHECK LAST NAME FIELD
+    // CHECK LAST NAME FIELD
     let lName = document.querySelector('#lastName').value;
     if (lName === ""){   
         let lNameError = document.getElementsByClassName("error-message")[1];
@@ -33,7 +33,7 @@ function validateFormOnSubmit(event){
         document.getElementsByClassName("form-control")[1].classList.remove("invalidStyle");
         document.getElementsByClassName("form-control")[1].classList.add("validStyle");
     };
-        // CHECK EMAIL FIELD
+    // CHECK EMAIL FIELD
     let eMail = document.querySelector('#eMail').value;
     if (eMail === ""){   
         let eMailError = document.getElementsByClassName("error-message")[2];
@@ -54,7 +54,7 @@ function validateFormOnSubmit(event){
         document.getElementsByClassName("form-control")[2].classList.remove("invalidStyle");
         document.getElementsByClassName("form-control")[2].classList.add("validStyle");
     };
-        // CHECK PASSWORD FIELD
+    // CHECK PASSWORD FIELD
     let passWord = document.querySelector('#passWord').value;
     if (passWord === ""){   
         let passWordError = document.getElementsByClassName("error-message")[3];

@@ -24,11 +24,11 @@ body{
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     background-image: url(../images/bg-intro-desktop.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-repeat: repeat-x;
+    background-size: inherit;
+    background-position: inherit;
     background-color: var(--red);
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -40,18 +40,18 @@ h1, h2{
 }
 
 h1{
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    line-height: 2.5rem;
+    line-height: 3rem;
     margin-bottom: 2rem;
 }
 
 h2{
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 600;
     background-color: var(--blue);
-    border-radius: 5px;
-    padding: 0.75rem;
+    border-radius: 10px;
+    padding: 1rem;
     text-align: center;
     box-shadow: 10px 20px 10px;
 }
@@ -62,7 +62,7 @@ h2 span{
 
 p{
     line-height: 1.5rem;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
 }
 
 a{
@@ -90,7 +90,7 @@ input[type="submit"]{
 form{
     background-color: white;
     padding: 40px;
-    border-radius: 5px;
+    border-radius: 10px;
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -104,7 +104,7 @@ input[type="submit"]{
     font-weight: 600;
     display: block;
     width: 100%;
-    padding: 0.75rem 1.25rem;
+    padding: 1rem 1.25rem;
     border-radius: 5px;
 }
 
@@ -117,7 +117,7 @@ input[type="password"]{
 input[type="text"]:focus,
 input[type="email"]:focus,
 input[type="password"]:focus{
-    outline: 1px solid var(--darkblue);
+    outline: 1px solid var(--blue);
     border: none;
     color: black;
 }
@@ -205,16 +205,16 @@ main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 10vh;
-    padding-bottom: 10vh;
-
+    justify-content: center;
+    padding: 10vh 0 10vh 0;
 }
 
 /* ===== LEFT SECTION ===== */
 
 .left{
     width: 50%;
-    padding-right: 30px;
+    max-width: 600px;
+    padding-right: 80px;
 }
 
 .left p{
@@ -225,6 +225,7 @@ main{
 
 .right{
     width: 50%;
+    max-width: 600px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -240,8 +241,6 @@ footer{
     width: 100vw;
 }
 
-/* ===== OTHERS ===== */
-
 .attribution {
     font-size: 11px;
     text-align: center;
@@ -253,29 +252,30 @@ footer{
 
 /* ===== MEDIA QUERIES ===== */
 
-/* ----- SMALL DEVICES – MAX. WIDTH 375 PX ----- */
+/* ----- SMALL DEVICES – MAX. WIDTH 600 PX ----- */
 
-/* (min-width: 375px) and */
-
-@media (max-width: 600px){
+@media (max-width: 768px){
     main{
-        background-color: green;
+        width: 90vw;
     }
-    /* ===== LEFT SECTION ===== */
-
-    .left{
-        width: 100%;
-        padding-right: unset;
-        text-align: center;
+    body{
+        background-image: url(../images/bg-intro-mobile.png);
     }
-
+    h2{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    form{
+        padding: 20px;
+    }
+    .left
     .right{
         width: 100%;
     }
-}
-
-/* ----- BIG DEVICES – MIN. WIDTH 1440 PX ----- */
-
-@media (min-width: 1440px) {
-    
+    .left{
+        padding-right: unset;
+        text-align: center;
+        padding-top: 25px;
+        padding-bottom: 60px;
+    }
 }
