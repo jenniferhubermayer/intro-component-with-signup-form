@@ -252,7 +252,7 @@ footer{
 
 /* ===== MEDIA QUERIES ===== */
 
-/* ----- SMALL DEVICES – MAX. WIDTH 600 PX ----- */
+/* ----- SMALL DEVICES – MAX. WIDTH 768 PX ----- */
 
 @media (max-width: 768px){
     main{
