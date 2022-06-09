@@ -12,8 +12,8 @@ function validateFormOnSubmit(event){
     if (fName === ""){   
         let fNameError = document.getElementsByClassName("error-message")[0];
         fNameError.innerText = placeholderFirstName + ' cannot be empty';
-        document.querySelector(".form-control").classList.remove("validStyle");
-        document.querySelector(".form-control").classList.add("invalidStyle");
+        document.getElementsByClassName("form-control")[0].classList.remove("validStyle");
+        document.getElementsByClassName("form-control")[0].classList.add("invalidStyle");
         document.getElementsByName('firstName')[0].placeholder = '';
     }
     else {   
@@ -42,14 +42,12 @@ function validateFormOnSubmit(event){
         document.getElementsByClassName("form-control")[2].classList.add("invalidStyle");
         document.getElementsByName('eMail')[0].placeholder = '';
     }
-
     else if (eMail.includes("@") == false || eMail.includes(".") == false){
         let eMailError = document.getElementsByClassName("error-message")[2];
         eMailError.innerText = 'Looks like this is not an email';
         document.getElementsByClassName("form-control")[2].classList.remove("validStyle");
         document.getElementsByClassName("form-control")[2].classList.add("invalidStyle");
     }
-
     else {
         document.getElementsByClassName("form-control")[2].classList.remove("invalidStyle");
         document.getElementsByClassName("form-control")[2].classList.add("validStyle");
